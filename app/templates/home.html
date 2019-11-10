@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="{{ url_for('handle_data') }}" method="POST">
+            <p>Select platform: </p>
+            <select name="platform">
+                <option value="1">Xbox</option>
+                <option value="2">Playstation</option>
+                <option value="3">Steam</option>
+            </select>
+            <input type="text" name="username">
+            <input type="submit" value="Submit">
+
+        </form>
+        <p>{{ username }} has {{ kills }} kills and {{ assists }} assists</p>
+    </body>
+</html>
