@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Showing stats for {{ username }}</h2>
+        <table>
+            <tr>
+                <th>Total Kills</th>
+                <th>Total Assists</th>
+                <th>Total Matches Played</th>
+                <th>Total Wins</th>
+            </tr>
+            <tr>
+                <td>{{ kills }}</td>
+                <td>{{ assists }}</td>
+                <td>{{ total_matches }}</td>
+                <td>{{ wins }}</td>
+            </tr>
+        </table>
+{% endblock %}

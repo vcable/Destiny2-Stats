@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/app/static/style.css">
+        {% if title %}
+            <title>{{ title }} - Destiny 2 PvP Stats</title>
+        {% else %}
+            <title>Destiny 2 PvP Stats</title>
+        {% endif %}
+    </head>
+    <body>
+        <h1>Destiny 2 PvP Stats</h1>
+        {% block content %} {% endblock %}
+    </body>
+</html>
