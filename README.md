@@ -1,0 +1,1 @@
+An app that uses the Bungie API to provide information about Destiny 2 players.  Still very much a work in progress.
