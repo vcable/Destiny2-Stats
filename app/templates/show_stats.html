@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Showing stats for {{ username }}</h2>
-        <table>
+<br><br><br>
+<h2 class="text-center">Showing stats for {{ username }}</h2>
+        <h2 class="text-center">PvP</h2>
+        <table class="table table-dark">
             <tr>
                 <th>Total Kills</th>
                 <th>Total Assists</th>
@@ -14,6 +16,19 @@
                 <td>{{ assists }}</td>
                 <td>{{ total_matches }}</td>
                 <td>{{ wins }}</td>
+            </tr>
+        </table>
+        <h2 class="text-center">Currently Equipped Items</h2>
+        <table class="table table-dark">
+            <tr>
+                {% for name in equipped_items.keys() %}
+                <th>{{ name }}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for icon in equipped_items.values() %}
+                <td><img src="{{ icon }}"></td>
+                {% endfor %}
             </tr>
         </table>
 {% endblock %}

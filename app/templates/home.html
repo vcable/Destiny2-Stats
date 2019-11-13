@@ -2,17 +2,20 @@
 
 {% block content %}
 
-<h2>Enter username</h2>
+<br><br><br><br><br><br><br><br>
+<div class="container text-center">
+    <h3>Enter username and select platform</h3>
+    <br><br>
+    <form action="{{ url_for('get_stats') }}" method="POST">
+        <select name="platform">
+            <option value="1">Xbox</option>
+            <option value="2">Playstation</option>
+            <option value="3">Steam</option>
+        </select>
+        <input type="text" name="username">
+        <input type="submit" value="Submit">
+    </form>
+</div>
 
-<form action="{{ url_for('get_stats') }}" method="POST">
-    <p>Select platform: </p>
-    <select name="platform">
-        <option value="1">Xbox</option>
-        <option value="2">Playstation</option>
-        <option value="3">Steam</option>
-    </select>
-    <input type="text" name="username">
-    <input type="submit" value="Submit">
-</form>
 
 {% endblock %}
